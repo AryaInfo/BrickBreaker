@@ -41,6 +41,7 @@ import javafx.scene.Parent;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import src.demo.BallDemo;
 
 public class Splash extends Parent {
 //UI_SCREEN “Splash screen”

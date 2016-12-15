@@ -37,7 +37,7 @@ import javafx.scene.image.ImageView;
 //import Bat;
 
 public class BallDemo extends Parent {
-    // UI_SCREEN “Ball”
+    // UI_SCREEN “BallDemo”
     public static final int DEFAULT_SIZE = 2;
     
     public static final int MAX_SIZE = 5;

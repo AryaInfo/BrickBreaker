@@ -34,6 +34,7 @@ package brickbreaker;
 import javafx.scene.Parent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import src.demo.BallDemo;
 
 public class Brick extends Parent {
 

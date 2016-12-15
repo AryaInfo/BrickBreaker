@@ -32,65 +32,42 @@
 package brickbreaker;
 
 import javafx.scene.Parent;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import src.demo.BallDemo;
-import src.demo.BallDemo2;
 
-public class Bonus extends Parent {
-//UI_SCREEN  “Bonus”
-    public static final int TYPE_SLOW = 0;
-    public static final int TYPE_FAST = 1;
-    public static final int TYPE_CATCH = 2;
-    public static final int TYPE_GROW_BAT = 3;
-    public static final int TYPE_REDUCE_BAT = 4;
-    public static final int TYPE_GROW_BALL = 5;
-    public static final int TYPE_REDUCE_BALL = 6;
-    public static final int TYPE_STRIKE = 7;
-    public static final int TYPE_LIFE = 8;
+//import Bat;
 
-    public static final int COUNT = 9;
+public class BallDemo2 extends Parent {
+    // UI_SCREEN “BallDemo2”
+    public static final int DEFAULT_SIZE = 2;
+    
+    public static final int MAX_SIZE = 5;
 
-    public static final String[] NAMES = new String[] {
-        "SLOW",
-        "FAST",
-        "CATCH",
-        "GROW BAT",
-        "REDUCE BAT",
-        "GROW BALL",
-        "REDUCE BALL",
-        "STRIKE",
-        "LIFE",
-    };
+    private int size;
 
-    private int type;
-    private int width;
-    private int height;
-    private ImageView content;
+    private int diameter;
+    private ImageView imageView;
 
-    public int getHeight() {
-        return height;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public int getType() {
-        return type;
-    }
-
-    public Bonus(int type) {
-        content = new ImageView();
-        getChildren().add(content);
-        this.type = type;
-        Image image = Config.getBonusesImages().get(type);
-        width = (int)image.getWidth() - Config.SHADOW_WIDTH;
-        height = (int)image.getHeight() - Config.SHADOW_HEIGHT;
-        content.setImage(image);
+    public Ball() {
+        imageView = new ImageView();
+        getChildren().add(imageView);
+        changeSize(DEFAULT_SIZE);
         setMouseTransparent(true);
+
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int getDiameter() {
+        return diameter;
+    }
+
+    public void changeSize(int newSize) {
+        size = newSize;
+        imageView.setImage(Config.getImages().get(Config.IMAGE_BALL_0 + size));
+        diameter = (int) imageView.getImage().getWidth() - Config.SHADOW_WIDTH;
     }
 
 }
-
 
