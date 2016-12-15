@@ -32,9 +32,9 @@
 package brickbreaker;
 
 import javafx.scene.Parent;
-//import Bat;
-
 import javafx.scene.image.ImageView;
+
+//import Bat;
 
 public class BallDemo extends Parent {
     // UI_SCREEN “Ball”
