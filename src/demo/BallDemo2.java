@@ -68,6 +68,10 @@ public class BallDemo2 extends Parent {
         imageView.setImage(Config.getImages().get(Config.IMAGE_BALL_0 + size));
         diameter = (int) imageView.getImage().getWidth() - Config.SHADOW_WIDTH;
     }
-
+  
+    
+    
+    
+    
 }
 
